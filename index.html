@@ -1,97 +1,756 @@
 
-<!DOCTYPE html>
+<style>
+	
+	
+	
+	@font-face { 
+  font-family:'synkopy';
+  src:url(https://awhe.neocities.org/templates/archive/Synkopy-Regular.otf);
+} 
+@font-face { 
+  font-family:"Font Awesome 5 Free";
+  font-style:normal;
+  font-weight:400;
+  font-display:block;
+  src:url(https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-regular-400.eot);
+  src:url(https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-regular-400.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-regular-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-regular-400.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-regular-400.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-regular-400.svg#fontawesome) format("svg");
+} 
+@font-face { 
+  font-family:"Font Awesome 5 Free";
+  font-style:normal;
+  font-weight:900;
+  font-display:block;
+  src:url(https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-solid-900.eot);
+  src:url(https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-solid-900.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-solid-900.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-solid-900.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.4/webfonts/free-fa-solid-900.svg#fontawesome) format("svg");
+} 
+  body {  
+    cursor:url(https://cur.cursors-4u.net/sports/spo-1/spo48.cur), auto !important;
+    text-align:left;
+    font-family:ms gothic, monospace;
+    background-image:url('https://i.imgur.com/z1MDStw.gif');
+    font-size:2vh;
+  }  
+* { 
+    cursor: url(https://cur.cursors-4u.net/sports/spo-1/spo48.cur), auto !important;
+} 
+
+body { 
+    cursor: url(https://cur.cursors-4u.net/sports/spo-1/spo48.cur), auto !important;
+} 
+
+body { 
+    text-align: left; 
+    font-family: ms gothic, monospace; 
+    background-image: url('https://i.imgur.com/z1MDStw.gif'); 
+    font-size: 2vh;
+} 
+
+html { 
+    scroll-behavior: smooth;
+} 
+
+.container { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 10fr 1fr 5fr 7fr 0.1fr; 
+    grid-auto-columns: 1fr; 
+    gap: 10px 1%; 
+    grid-auto-flow: row; 
+    justify-content: center; 
+    align-content: center; 
+    justify-items: center; 
+    align-items: center; 
+    grid-template-areas: ". header header header ."        ". profile1 main main ."        ". profile2 main main ."        ". profile2 foot foot .";
+    margin: 0 auto; 
+    margin-top: 5%; 
+    margin-left: 16%; 
+    width: 70%; 
+    height: 800px;
+}
+
+.chat { 
+   border: #990000 1px solid; 
+   height: 330px; 
+   width: 15%; 
+   float: right; 
+   position: absolute; 
+   top: 45%; /* Adjust this value as needed */
+   right: 71%; /* Use right instead of margin-right */
+   background-color: white; 
+   overflow: hidden;
+}
+
+	.titter { 
+   border: #990000 1px solid; 
+    height: 154px; 
+    width: 14%; 
+    float: left; 
+    position: absolute; 
+    margin-top: 14.9%; 
+    background-color: white; 
+    margin-left: 60%; /* Adjust as needed */
+    overflow: hidden;
+    /* Removed centering styles */
+} 
+
+
+#gif-image { 
+ float: left; /* Move the image to the left */
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden;
+}
+.header { 
+    grid-area: header; 
+    background-color: aqua; 
+    border: #990000 1px solid; 
+    width: 100%; 
+    height: 100%;
+} 
+
+.profile1 { 
+    grid-area: profile1; 
+    background-color: white; 
+    height: 100%; 
+    width: 100%; 
+    border: #990000 1px solid;
+} 
+
+.profile2 { 
+    grid-area: profile2; 
+    background-color: white; 
+    height: 100%; 
+    width: 100%; 
+    border: #990000 1px solid; 
+    overflow: auto; 
+    font-size: 2vh;
+} 
+
+.main { 
+    grid-area: main; 
+    background-color: white; 
+    height: 100%; 
+    width: 100%; 
+    border: #990000 1px solid; 
+    overflow: auto;
+} 
+
+.foot { 
+    grid-area: foot; 
+    background-color: white; 
+    height: 100%; 
+    width: 100%; 
+    border: #990000 1px solid; 
+    overflow: auto;
+} 
+
+
+
+
+
+
+#header_img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: fill; 
+    background-position: 57% 50%; 
+    background-image: url('https://i.imgur.com/8E6HUsM.png');
+} 
+
+hr { 
+    border: 0; 
+    height: 1px; 
+    background-image: linear-gradient(to right, white, #990000, white);
+} 
+
+p { 
+    margin: 2.5%;
+} 
+
+ul { 
+    font-size: 2vh;
+} 
+
+:host { 
+    display: inline-block; 
+    overflow: hidden; 
+    text-align: initial; 
+    white-space: nowrap;
+} 
+
+#style-VSnf1.style-VSnf1 { 
+    font-size: 16px; 
+    background: rgba(0,0,0); 
+    margin-top: 42%; 
+    color: #FFFFFF;
+} 
+	#style-oxXxi.style-oxXxi {  
+   position:absolute;  
+   top:8%;  
+   left:17%;  
+}  
+#style-tfWZz.style-tfWZz {  
+   border: white 3px solid;
+ position: relative; /* Position it relative to its normal position */
+    top: 350%;
+     max-width: 100%; /* Makes the image responsive */
+    height: auto; 
+}  
+
+#musicplayer { 
+    background: white; 
+    border: 1px solid #990000; 
+    width: 200px;
+} 
+
+span { 
+    font-family: 'synkopy'; 
+    font-size: 4vh; 
+    color: #990000;
+} 
+
+a { 
+    color: #990000; 
+    text-decoration: none;
+} 
+
+a:hover { 
+    color: #a2a2ff; 
+    text-decoration: none;
+} 
+
+.controls { 
+    font-size: 18px !important; 
+    background-color: #1e0303; 
+    text-align: center; 
+    width: 100%;
+} 
+
+.seeking { 
+    background-color: #990000; 
+    display: flex; 
+    justify-content: space-evenly; 
+    padding: 5px;
+} 
+
+.profile2 img  { 
+    padding: 2%;
+} 
+
+.songtitle { 
+    padding: 5px; 
+    border-bottom: 2px solid #990000; 
+    display: block;
+} 
+
+.current-time { 
+    padding-right: 5px;
+} 
+
+input[type="range"] { 
+    -webkit-appearance: none; 
+    width: 100%; 
+    background-color: #990000;
+} 
+
+.total-duration { 
+    padding-left: 5px;
+} 
+
+#statuscafe { 
+    padding: .5em; 
+    background-color: azure; 
+    border: 1px solid midnightblue;
+} 
+
+.controls td  { 
+    padding: 8px 5px 0px 5px;
+} 
+
+#statuscafe-username { 
+    margin-bottom: .5em;
+} 
+
+#statuscafe-content { 
+    margin: 0 1em 0.5em 1em;
+} 
+
+.fas { 
+    -moz-osx-font-smoothing: grayscale; 
+    -webkit-font-smoothing: antialiased; 
+    display: inline-block; 
+    font-style: normal; 
+    font-variant: normal; 
+    text-rendering: auto; 
+    line-height: 1;
+} 
+
+.fas { 
+    font-family: "Font Awesome 5 Free";
+} 
+
+.fas { 
+    font-weight: 900;
+} 
+
+i.fas.fa-backward { 
+    color: white;
+} 
+
+.fa-backward:before { 
+    content: "\f04a";
+} 
+
+i.fas.fa-play { 
+    color: white;
+} 
+
+.fa-play:before { 
+    content: "\f04b";
+} 
+
+i.fas.fa-forward { 
+    color: white;
+} 
+
+.fa-forward:before { 
+    content: "\f04e";
+} 
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-qzj3h.style-qzj3h {  
+   color:red;  
+}  
+#style-MUiWB.style-MUiWB {  
+   width:88px;  
+   height:31px;  
+}  
+#style-GPwix.style-GPwix {  
+   width:88px;  
+   height:31px;  
+}  
+	#style-W7Mrx.style-W7Mrx { 
+    text-align: center; 
+    overflow: hidden;
+}
+
+.new-grid-container {
+    display: grid; /* Makes this container a grid */
+    grid-template-columns: 1fr 1fr; /* Two columns for the 2x2 layout */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 5%; /* Space between items as a percentage of container size */
+    justify-content: center; /* Centers the grid horizontally */
+    align-content: center; /* Centers the grid vertically */
+    margin: 5% auto; /* Adds spacing below the previous grid */
+    width: 90%; /* Grid width adjusts relative to viewport */
+    max-width: 800px; /* Ensures the grid doesn't get too wide */
+}
+
+/* Styles for each box with responsive positioning */
+.newbox1 {
+    background-color: lightgray; 
+    border: #990000 1px solid; 
+    text-align: center;
+    width: 105%; /* Relative to container width */
+    height: 40vh; /* Relative to viewport height */
+    position: relative;
+    top: -6vh; /* Moves the box down by 2% of the viewport height */
+    left: -1%; /* Moves the box right by 5% of the container width */
+}
+
+.newbox2 {
+    background-color: saddlebrown; 
+    border: #990000 1px solid; 
+    text-align: center;
+    width: 90%; 
+    height: 38vh; 
+    position: relative;
+    top: -6vh; /* Moves the box up */
+    left: -3%; /* Moves the box left */
+     overflow: auto; /* Adds scrolling when content overflows */
+}
+
+.newbox3 {
+    background-color: lightgray; 
+    border: #990000 1px solid; 
+    text-align: center;
+    width: 70%; 
+    height: 25vh; 
+    position: relative;
+    top: -3vh; /* Moves the box down */
+    right: -20%; /* Moves the box left */
+     overflow: auto; /* Adds scrolling when content overflows */
+}
+
+.newbox4 {
+    background-color: lightgray; 
+    border: #990000 1px solid; 
+    text-align: center;
+    width: 70%; 
+    height: 20vh; 
+    position: relative;
+    bottom: 3vh; /* Moves the box up */
+    right: 8%; /* Moves the box left */
+     overflow: auto; /* Adds scrolling when content overflows */
+}
+
+/* Add media queries for fine-tuning responsiveness */
+@media (max-width: 768px) {
+    .new-grid-container {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+        grid-template-rows: repeat(4, auto); /* Four rows for the boxes */
+    }
+    .newbox1, .newbox2, .newbox3, .newbox4 {
+        width: 80%; /* Make boxes smaller for narrow screens */
+        height: 20vh;
+        top: 0; /* Reset custom positions */
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+div.hebcal-container {
+ font-family: "Gill Sans MT","Gill Sans",GillSans,Arial,Helvetica,sans-serif;
+ font-size: small;
+}
+div.hebcal-container div h3 {
+ font-family: Georgia,Palatino,"Times New Roman",Times,serif;
+}
+div.hebcal-container div ul.hebcal-results { list-style-type:none }
+div.hebcal-container div ul.hebcal-results li {
+  margin-bottom: 11px;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: normal;
+}
+div.hebcal-container div div.hebcal-results .candles { color: red; font-size: large }
+div.hebcal-container div div.hebcal-results .havdalah { color: green }
+div.hebcal-container div div.hebcal-results .parashat { color: black; background: #ff9 }
+div.hebcal-container div div.hebcal-results .holiday { display: none }
+
+.newbox1 video {
+    width: 100%; /* Make the video fill the box's width */
+    height: 100%; /* Make the video fill the box's height */
+    object-fit: cover; /* Ensures the video scales to fill the box without distortion */
+    border: none; /* Remove any default borders */
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
 <html>
-<head>
-	<title> * Your Site Here * </title>
-	<link href="cyanobacteria.css" rel="stylesheet" type="text/css" media="all">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-</head>
-<body>
+<div class="container snipcss-toI6C">
+    <div class="header">
+        <div id="header_img">
+            <marquee class="style-VSnf1" id="style-VSnf1">I CANNOT BE BLAMED FOR THE PHANTASMAGORIC REVELATIONS THAT DESCEND UPON YOU ONCE SEEING THIS SITE IN MOBILE, MAY GOD HAVE MERCY ON YOUR SOUL </marquee>
+        </div>
+    </div>
 
-	<div class="container">
+	<div class="titter">
+    <div class="style-W7Mrx" id="style-W7Mrx">
+    </div>
+    <img id="gif-image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDRzeTZiaW85Z2FmMHVqaHR4Z3V6d3ZvazEwdmhvNzdjMmhlYzVoYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1kc4v9ILa2FKUZ66AU/giphy.gif" alt="Your GIF">
+</div>
 
-		<header>
-			<span>site name here</span>
-		</header>
-		
-		<div class="small">
-			<nav>
-				<div>navigation</div>
-				<a href="">link</a>
-				<a>link</a>
-				<a>link</a>
-				<a>link</a>
-				<a>link</a>
-				<a>link</a>
-				<a>link</a>
-				<a>longer link</a>
-				<a>an even longer link</a>
-				<a>last link</a>
-			</nav>
-			<!-- optional spot for styled button outside the navigation box -->
-			<img src="">
-		</div>
-		
-		<section class="half">
-			<h1>welcome to my homepage!</h1>
-			<h2>Heading 2</h2>
-			<h3>Heading 3</h3>
-			<h4>Heading 4</h4>
-			<p>
-				<strong>This is strong,</strong>
-				this is normal, and
-				<em>this is emphasized!</em>
-				<a href="#">This is a link.</a>
-				<sup>This is superscript;</sup>
-				<sub>this is subscript.</sub>
-				<code>This is code.</code>
-				<s>This is strikethrough.</s>
-			</p>
-			<ul>
-				<li>Unordered list item 1</li>
-				<li>Unordered list item 2
-					<ul>
-						<li>Nested list</li>
-					</ul>
-				</li>
-				<li>Unordered list item 3</li>
-			</ul>
-			<ol>
-				<li>Unordered list item 1</li>
-				<li>Unordered list item 2
-					<ul>
-						<li>Nested list</li>
-					</ul>
-				</li>
-				<li>Unordered list item 3</li>
-			</ol>
-		</section>
-				
-		<section class="small">
-			<h2>another section</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis orci at sodales convallis. Proin luctus vehicula dolor, id ultrices diam eleifend eu. Donec tincidunt tellus tellus, in maximus lorem fermentum ac. Phasellus sagittis nisi in ante pretium, eget molestie est pellentesque. Ut tincidunt ultricies porta.</p>
-		</section>
-		
-		<section class="full">
-			<h2>full width section</h2>
-		</section>
-		
-		<section class="half">
-			<h2>half width section</h2>
-		</section>
-		
-		<section class="half">
-			<h2>half width section</h2>
-		</section>
-		
-	</div>
+	 <img src="https://i.imgur.com/UN9A5Em.png" width="12%" height="auto" class="style-oxXxi" id="style-oxXxi">
+  <div id="hum">
+    <center>
+      <img src="https://i.imgur.com/RKrGafi.png" class="style-tfWZz" id="style-tfWZz">
+      <br>
+      <br>
+      
+    </center>
+  </div>
 
-	<footer>
-		<span>cyanobacteria.css by <a href="https://ribo.zone">ribo.zone</a></span>
-	</footer>
+	
+    <div class="profile1">
+        <center>
+            <div id="style-waUnE" class="style-waUnE">
+                <span id="style-otB3L" class="style-otB3L"> MUSIC </span>
+            </div>
+            <div id="musicplayer">
+                <div>
+                    <marquee scrollamount="8" class="songtitle">playing 1 of 4: RIDE LIKE THE WIND - christopher cross</marquee>
+                </div>
+                <table class="controls">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="prev-track" onclick="prevTrack()">
+                                    <i class="fas fa-backward" aria-hidden="true">
+                                    </i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="playpause-track" onclick="playpauseTrack()">
+                                    <i class="fas fa-play" aria-hidden="true">
+                                    </i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="next-track" onclick="nextTrack()">
+                                    <i class="fas fa-forward" aria-hidden="true">
+                                    </i>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="seeking">
+                    <div class="current-time">0:00</div>
+                    <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                    <div class="total-duration">4:30</div>
+                </div>
+                <audio id="music" src="https://files.catbox.moe/cp3iff.mp3">
+                </audio>
+            </div>
+        </center>
+        <br>
+    </div>
+    <div class="profile2 snipcss0-1-1-32 snipcss-lqtF7">
+        <div class="snipcss0-2-32-33 style-4jZZ8" id="style-4jZZ8">
+            <span class="snipcss0-3-33-35 style-n41tI" id="style-n41tI">
+                <center> NAV </center>
+            </span>
+        </div>
+        <hr class="snipcss0-2-32-37">
+        <b class="snipcss0-2-32-38">
+        </b>
+        <p class="snipcss0-2-32-39 style-4GHY3" id="style-4GHY3">
+            <b class="snipcss0-3-39-40"> main </b> ...
+        </p>
+        <ul class="snipcss0-2-32-41">
+            <li class="snipcss0-3-41-42">
+                <a href="https://neocities.org/site/cybertomboy">PROFILE</a>
+            </li>
+            <li class="snipcss0-3-41-45">
+                <a href="https://cybertomboy.neocities.org/about"> THE WEBMASTER</a>
+            </li>
+            <li class="snipcss0-3-41-47">
+                <a href="https://cybertomboy.atabook.org"> GUESTBOOK </a>
+            </li>
+            
+              <li class="snipcss0-3-41-47">
+                <a href=""> PARANOIA ON THE COAST (A Gravity Falls AU)- rewriting!! </a>
+            </li>
+            
+            <li class="snipcss0-3-41-47">
+                <a href="https://cybertomboy.neocities.org/retro"> RETRO MUSIC REVIVAL </a>
+            </li>
+        </ul>
+        <hr class="snipcss0-2-32-100">
+        <center class="snipcss0-2-32-101">
+            <span class="snipcss0-3-101-102 style-IMZtZ" id="style-IMZtZ"> webrings </span>
+            <div id="RPGMaker" class="snipcss0-3-101-103">
+                <table class="snipcss0-4-103-104">
+                    <tbody class="snipcss0-5-104-105">
+                        <tr class="snipcss0-6-105-106">
+                            <td class="webring-info snipcss0-7-106-107">
+                            
+                            
+                               <!--START OF SELF INSERT WEBRING-->
+			<div id="selfinsertwebring">
+				<script src="showWebring.js"></script>
+			</div>
+			<!--END OF SELF INSERT WEBRING-->
+			
+			<br>
+			<br>
+		<a href='https://webri.ng/webring/freespeechwebring/previous?via=https://https://cybertomboy.neocities.org'><img src="https://i.imgur.com/sIR6aFP.gif" width="13" height="13"></a> <a href="https://town.thecozy.cat/web-revival/freespeechwebring/"><img src="https://i.imgur.com/7QmM7ej.gif' width="88" height="31"></a> <a href='https://webri.ng/webring/freespeechwebring/next?via=https://https://cybertomboy.neocities.org'><img src="https://i.imgur.com/6ni3bTd.gif" width="13" height="13"></a>
+		
+		<br>
+		<br>
+<a href='https://webri.ng/webring/thebookring/previous?via=https://https://cybertomboy.neocities.org'><img src="https://i.imgur.com/sIR6aFP.gif" width="13" height="13"> </a><a href="https://library.thecozy.cat/"><img src="https://i.imgur.com/jHvBfuh.gif' width="88" height="31"></a><a href='https://webri.ng/webring/thebookring/next?via=https://https://cybertomboy.neocities.org'> <img src="https://i.imgur.com/6ni3bTd.gif" width="13" height="13"></a>
+                            
+                            <br>
+                            <br>
+                            
+                            
+                            <SCRIPT LANGUAGE="JavaScript"><!--
+if (navigator.appVersion.indexOf('MSIE 3') == -1)
+    document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="https://ficring.neocities.org/ring.js"><\/SCRIPT>');
+else
+    document.write('<CENTER><IFRAME FRAMEBORDER=0 WIDTH="100" HEIGHT="50" MARGINHEIGHT=0 MARGINWIDTH=0 SCROLLING=no SRC="https://ficring.neocities.org/ring.html"><\/IFRAME><\/CENTER>');
+//--></SCRIPT> 
+                            
+                            
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br class="snipcss0-3-101-113">
+            <br class="snipcss0-3-101-114">
+            <div id="selfinsertwebring">
+            </div>
+            <hr class="snipcss0-3-101-119">
+            <span class="snipcss0-3-101-120 style-3vMlj" id="style-3vMlj"> fanlistings </span>
+            <br class="snipcss0-3-101-121">
+            <a href="https://fan.redcrown.net/spiderverse"><img src="https://fan.redcrown.net/spiderverse/codes/50x50-1.png" alt="Spider-Man: Into the Spider-Verse fanlisting"></a>
+            <a href="https://love.strongisfighting.org/frog/"><img src="https://i.imgur.com/T0OoKBn.png"></a>
+            <a href="https://boundless-realms.com/nancydowns/"><img src="https://i.imgur.com/hEE7pBZ.gif"></a>
+            <a href="http://amalgamate.afflatus-misery.net/raph/"><img src="https://i.imgur.com/E1KhO22.jpeg"></a>
+            <a href="https://herotovillain.com/batman/"><img src="https://i.imgur.com/80KFYgZ.png"></a>
+            <a href="https://www.marheavenj.net/convergence/"><img src="https://i.imgur.com/Ea9ZY4j.jpeg"></a>
+            <a href="https://sarennia.net/horror/"><img src="https://i.imgur.com/3p4eJY1.png"></a>
+            <a href="https://michiru.org/arucard/"><img src="https://i.imgur.com/KaFsARV.gif"></a>
+            <a href="https://www.marheavenj.net/jotaro/"><img src="https://i.imgur.com/LVPDcmi.jpeg"></a>
+            <a href="https://imaginary.nu/l4d2/"><img src="https://imaginary.nu/l4d2/codes/50x50_2.png"></a>
+            <a href="https://i-heart.net/lollipopchainsaw/"><img src="https://i.imgur.com/62kxxWk.png"></a>
+            <a href="https://leon.residentevils.net/"><img src="https://leon.residentevils.net/codes/50x50_2.png"></a>
+            <a href="https://tcp.fanfreak.net/"><img src="http://fanfreak.net/admin/images/codes/b6449e45093f56_50x50-3.png"></a>
+            <a href="https://theatregirl.net/fanfics/"><img src="https://theatregirl.net/fanfics/images/50x50.png"></a>
+            <a href="https://inkcaps.neocities.org/gf"><img src="https://i.imgur.com/LhvViE6.png" alt="Gravity Falls Fanlisting"></a>
+            <a href="https://beatles.allneonlike.org/index.php"><img src="https://i.imgur.com/FzS9h25.jpeg" alt="The Beatles Fanlisting"></a>
+</center>
+    </div>
+    <div class="main">
+        <div id="style-3GBNX" class="style-3GBNX">
+            <span id="style-atHFQ" class="style-atHFQ">
+                <center> WELCOME </center>
+            </span>
+        </div>
+        <hr>
+        <table>
+            <tbody>
+                <tr>
+                    <td id="style-wNaxM" class="style-wNaxM">
+                    </td>
+                    <td>
+                        <p id="style-R11O5" class="style-R11O5">
+                        </p>
+                        <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=cybertomboy" defer></script>
+                        <br>
+                        <p>...Welcome to my sandbox on this tiny corner of the web...</p>
+                        <br>
+                        <p>this is where i've decided to spend most of my time, just chattin and posting about my wide range of interests trying to distance myself from the other internet loons.</p>
+                        <p>We get a little freaky on here, a little personal. But who honestly cares, let's just vibe.</p>
+                        <br>
+                        <p>This site is still heavily under construction and i move at a snail pace, so come back periodically to check out what's new!</p>
+                        <p><img src="https://pixelsafari.neocities.org/favicon/nature/plant/clover.png"> stay swag and don't be degenerates <img src="https://pixelsafari.neocities.org/favicon/nature/plant/clover.png"></p>
+                        <br>
+                        <br>
+                        <br>
+                        <p></p>
+                        <p id="style-8ytSy" class="style-8ytSy">
+                            <strong> email: </strong> darcydh.nanno@proton.me
+                        </p>
+                        <br>
+                        <br>
+                        <p id="style-Y2qsm" class="style-Y2qsm">
+                        </p>
+                        <p id="style-qzj3h" class="style-qzj3h">layout inspired from awhe on neocities!</p>
+                        <p></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="foot">
+        <div id="style-2JP75" class="style-2JP75">
+            <span id="style-QH8JG" class="style-QH8JG">
+                <center> SPARED FROM RAPTURE </center>
+            </span>
+            <br>
+        </div>
+       <center>
+            <a href="https://cottage.thecozy.cat/"><img decoding="async" src="https://i.imgur.com/Eh8NawK.gif"></a> 
+            <a href=https://kotteism.neocities.org/><img src=https://files.catbox.moe/7f0vdh.png></a>
+            <a href=https://maleficarum.neocities.org><img src=https://maleficarum.neocities.org/site-button.png></a>
+            <a href=https://tomoko-lodge.neocities.org><img src=https://i.imgur.com/IVjunRT.jpeg></a>
+            <a href=https://dykeism.neocities.org><img src=https://dykeism.neocities.org/images/button1.gif></a>
+            <a href=https://maydb.net><img src=https://maydb.net/images/88x31/maydb.png></a>
+            <a href=https://thepiratebay66.neocities.org><img src=https://thepiratebay66.neocities.org/img/mybutton.png></a>
+            <a href="https://personal.luagunsx.xyz"><img src="https://personal.luagunsx.xyz/2024_01_26_11i_Kleki.png" alt="Visit my site!"/></a>
+            <a href="https://engelsbeginn.ing/"><img src="https://i.imgur.com/wPnpIxL.png">
+            <a href="https://concon.soy"><img src="https://concon.soy/images/buttons/conconbutton.gif">
+            <a href="https://kwaamfan.neocities.org"><img src="https://kwaamfan.neocities.org/main/images/88x31/kwaamfan_haruka.gif">
+            <a href="https://idelides.xyz/"><img src="https://idelides.xyz/neocities-idelides/Neocities%20button.png"></a>
+            <a href="https://humanraccoon.com"><img src="https://humanraccoon.com/elements/rcnbutton.png"></a>
+            <a href="https://wizardperspective.neocities.org"><img src="https://i.imgur.com/E5gfMFz.png"></a>
+           <a href="https://cabbagesorter.neocities.org"><img src="https://cabbagesorter.neocities.org/BUTTONS/cabbagesorter2.gif"></a>
+           <a href="https://elaboraet.neocities.org"><img src="https://elaboraet.neocities.org/static/elrt.png"></a>
+           <a href="https://agoraroad.neocities.org"><img src="https://forum.agoraroad.com/data/addonflare/awardsystem/icons/180.gif?1632460929"></a>
+           <a href="https://netofcalypso.com"><img src="https://netofcalypso.com/Buttons/nocbutt.png"></a>
+           <a href="https://schizopunk-media.neocities.org"><img src="https://schizopunk-media.neocities.org/Buttons/schizobutt.png"></a>
+           <a href=https://hardmachine.neocities.org/><img src=https://i.imgur.com/wKPFSRy.png></a>
+           <a href=https://inpieces.rip><img src=https://inpieces.rip/pix/thanksvhs.gif></a>
+           <a href=https://pnnamerica.com><img src=https://pnnamerica.neocities.org/PNN.png></a>
+          <a href=https://pagespages.neocities.org><img src=https://pagespages.neocities.org/pages_pages_button.jpg></a>
+          <a href=https://sephiria.com><img src=https://sephiria.com/materia/favicon/sephiria.gif></a>
+          <a href="https://arandomsite.neocities.org/"><img src="https://arandomsite.neocities.org/IMG/buttons/88x31.gif" /></a>
+          <a href="https://milk-tea.neocities.org/"><img src="https://milk-tea.neocities.org/button4.gif" /></a>
+          <a href="https://slaid.neocities.org"><img src="https://slaid.neocities.org/mainpage2/slaibeach8.png" /></a>
+          <a href=https://misterdizzy.neocities.org><img src=https://misterdizzy.neocities.org/pixelart/8831.png></a>
+          <a href=https://eldritchdata.neocities.org><img src= https://misterdizzy.neocities.org/projects/buttons/eldritchdata.png></a>
+          <a href=https://www.cozynet.org><img src=https://www.cozynet.org/images/cozynet_88x31_banner.gif></a>
+           <a href=https://wrongthink.link><img src=https://i.imgur.com/POqQOE2.png></a>
+           <a href=https://44caliber.net><img src=https://i.imgur.com/OdYG9lN.jpeg></a>
+           <a href=https://capstasher.neocities.org><img src= https://capstasher.neocities.org/csc_88x31.png></a>
+          <a href=https://joppiesaus.neocities.org><img src=https://i.imgur.com/cX7sbu5.png></a>
+          <a href=https://dannarchy.com><img src=https://dannarchy.com/images/d_now.gif></a>
+          <a href=https://angeleyesprings.neocities.org><img src=https://angeleyesprings.neocities.org/buttons/angeleyebutton.png></a> 
+          <a href=https://lazer-bunny.neocities.org><img src=https://i.imgur.com/V4cs5I8.gif></a> 
+          </center>
 
-</body>
+
+        </center>
+        
+        
+        
+        
+    
+    </div>
+  
+    
+    
+</div>
+
+<div class="new-grid-container">
+    <div class="newbox1">  
+   <video src="videos/my-video.mp4" controls></video>
+    </div>
+    
+    
+    <div class="newbox2">
+    <div id="hebcal-shabbat"></div>
+<center><div id="hebcal-shabbat"></div>
+<script>
+fetch('https://www.hebcal.com/shabbat?cfg=i2&geonameid=5095281&ue=off&b=30&M=on&lg=a&tgt=_top')
+  .then(response => response.text())
+  .then(data => document.getElementById('hebcal-shabbat').innerHTML = data);
+</script></center>
+    </div>
+    
+    
+    <div class="newbox3">
+    
+    </div>
+    
+    
+    <div class="newbox4">
+    
+    
+    </div>
+</div>
+
+<div class="chat">
+<iframe src="https://www3.cbox.ws/box/?boxid=3533582&boxtag=saJiGi" width="245" height="330" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>		
+
+    </div>
+    
+</div>
+
+
 </html>
 
 
@@ -99,193 +758,160 @@
 
 
 
-<style>
-  /* start light mode styling */
-	:root {
-		--text: darkslategrey;
-		--border: lightgrey;
-		--accent: teal;
-		--bg: #dce3e1;
-		--gradientTop: white;
-		--gradientBottom: rgb(240, 248, 255, .8);
-	}
-	header {
-		background: url('https://i.imgur.com/dPVhwwM.jpeg');
-	}
-/* end light mode styling */
 
 
-/* start dark mode styling */
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--text: white;
-			--border: #5a7678;
-			--accent: #74C365;
-			--bg: rgb(0,60,60,.8);
-			--gradientBottom: rgb(0, 50, 60);
-			--gradientTop: darkslategrey;
-			a:link { color: lightblue; }
-		}
-		header {
-			background: url('https://i.imgur.com/dPVhwwM.jpeg');
-		}
-	}
-/* end dark mode styling */
 
 
-* { 
-	box-sizing: border-box;
-}
-body {
-	padding: 10px;
-	font-family: 'MS PGothic', sans-serif;
-	color: var(--text);
+<script>
+        // initiate variables
+        let track_name = document.querySelector(".songtitle");
+ 
+        let playpause_btn = document.querySelector(".playpause-track");
+        let next_btn = document.querySelector(".next-track");
+        let prev_btn = document.querySelector(".prev-track");
+ 
+        let seek_slider = document.querySelector(".seek_slider");
+        let curr_time = document.querySelector(".current-time");
+        let total_duration = document.querySelector(".total-duration");
+ 
+        let track_index = 0;
+        let isPlaying = false;
+        let updateTimer;
+        
+        // create new audio element
+        let curr_track = document.getElementById("music");
+        
+        //
+        // DEFINE YOUR SONGS HERE!!!!!
+        // MORE THAN FOUR SONGS CAN BE ADDED!!
+        // JUST ADD ANOTHER BRACKET WITH NAME AND PATH
+        // CATBOX.MOE IS RECOMMENDED FOR UPLOADING MP3 FILES
+        let track_list = [
+            {
+                name:"REPENT WALPURGIS - procol harum",
+                path:"https://files.catbox.moe/j5ey1w.mp3"
+            },
+          {
+                name:"I AM THE WALRUS - the beatles",
+                path:"https://files.catbox.moe/7tbk54.mp3"
+            },
+           {
+                name:"REAL LOVE - the beatles",
+                path:"https://files.catbox.moe/1uwzfi.mp3"
+            },
+            {
+                name:"",
+                path:""
+            },
+              
+        ];
+        //
+        //
+        //
+        //
+        //
+ 
+        function loadTrack(track_index) {
+            clearInterval(updateTimer);
+            resetValues();
+ 
+            // load a new track
+            curr_track.src = track_list[track_index].path;
+            curr_track.load();
+            
+            // update details of the track
+            track_name.textContent = "playing " + (track_index + 1) + " of " + track_list.length + ": " + track_list[track_index].name;
+ 
+            // set an interval of 1000 milliseconds for updating the seek slider
+            updateTimer = setInterval(seekUpdate, 1000);
+            
+            // move to the next track if the current one finishes playing 
+            curr_track.addEventListener("ended", nextTrack);
+        }
+ 
+        // reset values
+        function resetValues() {
+            curr_time.textContent = "0:00";
+            total_duration.textContent = "0:00";
+            seek_slider.value = 0;
+        }
+ 
+        // checks if song is playing
+        function playpauseTrack() {
+            if (!isPlaying) playTrack();
+            else pauseTrack();
+        }
+ 
+        // plays track when play button is pressed
+        function playTrack() {
+            curr_track.play();
+            isPlaying = true;
+            
+            // replace icon with the pause icon
+            playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+ 
+        // pauses track when pause button is pressed
+        function pauseTrack() {
+            curr_track.pause();
+            isPlaying = false;
+            
+            // replace icon with the play icon
+            playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+ 
+        // moves to the next track
+        function nextTrack() {
+            if (track_index < track_list.length - 1)
+                track_index += 1;
+            else track_index = 0;
+            loadTrack(track_index);
+            playTrack();
+        }
+ 
+        // moves to the previous track
+        function prevTrack() {
+            if (track_index > 0)
+                track_index -= 1;
+            else track_index = track_list.length;
+            loadTrack(track_index);
+            playTrack();
+        }
+ 
+        // seeker slider
+        function seekTo() {
+            seekto = curr_track.duration * (seek_slider.value / 100);
+            curr_track.currentTime = seekto;
+        }
+ 
+        function seekUpdate() {
+            let seekPosition = 0;
+            
+            // check if the current track duration is a legible number
+            if (!isNaN(curr_track.duration)) {
+                seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+                seek_slider.value = seekPosition;
+                
+            // calculate the time left and the total duration
+            let currentMinutes = Math.floor(curr_track.currentTime / 60);
+            let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+            let durationMinutes = Math.floor(curr_track.duration / 60);
+            let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+                
+            // adding a zero to the single digit time values
+            if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+            if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+            if (currentMinutes < 10) { currentMinutes = currentMinutes; }
+            if (durationMinutes < 10) { durationMinutes = durationMinutes; }
+ 
+            curr_time.textContent = currentMinutes + ":" + currentSeconds;
+            total_duration.textContent = durationMinutes + ":" + durationSeconds;
+          }
+        }
+        
+        // load the first track in the tracklist
+        loadTrack(track_index);
+    </script>
+  
 
-	/* page background pattern */
-	background-color: var(--gradientTop);
-	background-image:  linear-gradient(30deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), linear-gradient(150deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), linear-gradient(30deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), linear-gradient(150deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), linear-gradient(60deg, var(--bg) 25%, transparent 25.5%, transparent 75%, var(--bg) 75%, var(--bg)), linear-gradient(60deg, var(--bg) 25%, transparent 25.5%, transparent 75%, var(--bg) 75%, var(--bg));
-	background-size: 20px 35px;
-	background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
-}
-
-
-.container {
-	max-width: 55rem;
-	margin: 5vw auto 12px auto;
-	border: 6px ridge var(--border);
-	outline: 3px solid var(--gradientTop);
-	outline-offset: 4px;
-	border-radius: 10px;
-	display: flex;
-	flex-wrap: wrap;
-	padding: 5px;
-	gap: 5px;
-
-	/* container background pattern */
-	background-color: var(--gradientBottom);
-	background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, var(--gradientBottom) 9px ), repeating-linear-gradient( var(--bg), var(--bg));
-}
-/* these control the column widths */
-.small { flex: 1 1 9%; }
-.large { flex: 1 1 82%; }
-.full { flex: 1 1 100%; }
-.half { flex: 1 1 49%; }
-
-
-header {
-	background-size: cover;
-	background-position: center;
-	width: 100%;
-	height: 120px; /* change banner height here*/
-	border: 2px ridge var(--border);
-	border-radius: 5px;
-	position: relative;
-}
-header span {
-	font-size: 2.5rem;
-	position: absolute;
-	bottom: 0;
-	right: 10px;
-	margin: 10px;
-	font-weight: bold;
-	text-shadow: 1px 1px var(--text),
-		-1px 1px var(--text),
-		1px -1px var(--accent),
-		-1px -1px var(--accent);
-	color: var(--gradientTop);
-}
-
-
-nav {
-	border: 2px ridge var(--border);
-	border-radius: 5px;
-	padding: 5px;
-	background: linear-gradient(var(--gradientTop),var(--gradientBottom));
-}
-nav div {
-	text-align: center;
-	font-size: 1.25rem;
-	margin: 5px 5px 10px 5px;
-}
-nav a {
-	display: block;
-	margin: 5px;
-	background: linear-gradient(to right,var(--bg),var(--gradientBottom));
-	border-radius: 5px;
-	padding: 2px 7px;
-	text-decoration: none;
-}
-nav a:link, nav a:visited { 
-	color: var(--text);
-}
-nav a:hover, nav a:focus {
-	background: linear-gradient(to right,var(--bg), var(--gradientBottom), var(--gradientTop));
-}
-
-/* optional button styling like in the preview */
-div.small > img {
-	display: block;
-	margin: 5px auto;
-	border:2px ridge var(--border);
-	border-radius: 5px;
-}
-
-
-section {
-	border: 2px ridge var(--border);
-	border-radius: 5px;
-	background: linear-gradient(var(--gradientTop),var(--gradientBottom));
-	padding: 5px;
-}
-
-
-footer {
-	text-align: center;
-	margin-bottom: 5vw;
-	font-size: 0.8rem;
-}
-footer a { 
-	text-decoration: none;
-}
-
-
-h1, h2, h3, h4, h5, h6, p  { 
-	margin: 5px;
-	line-height: 1.2;
-}
-h1 { 
-	font-size: 1.4rem;
-	letter-spacing: 2px;
-	font-weight: normal;
-	text-align: center;
-	border-bottom: 2px ridge var(--border);
-	padding-bottom: 5px;
-}
-h2 { 
-	font-size: 1.25rem;
-	font-weight: normal;
-	text-align: center;
-}
-h3 { 
-	font-size: 1.1rem;
-}
-h4 { 
-	font-size: 1rem;
-	color: var(--accent);
-	padding-left: 12px;
-}
-
-/* prevents overflow on smaller screens */
-img { max-width: 100%; }
-pre { overflow-x: auto; }
-
-
-a:hover, a:focus {
-	font-style: italic;
-}
-a:visited {
-	color: var(--accent);
-}
-</style>
-
-
+  
